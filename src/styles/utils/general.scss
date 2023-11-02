@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* scroll bar styling */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 4px solid $bg;
+  background: $bg-secondary;
+  border-radius: 10px;
+}
+
+input,
+textarea,
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-color: $bg;
+  color: $text;
+  font-family: "Poppins", sans-serif;
+}
+// =+=+=+=+=+=+=+= Icons =+=+=+=+=+=+=+=
+#icon {
+	fill: $primary;
+}
+
+#icon--stroke {
+	stroke: $text;
+}
+
+svg:hover #icon {
+	fill: $primary-hover;
+}
+
+svg:hover #icon--stroke {
+	stroke: $primary-hover;
+}
+
+// =+=+=+=+=+=+=+= General =+=+=+=+=+=+=+=
+::selection {
+	color: $bg;
+	background: $primary;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+.external-link {
+	text-decoration: underline;
+	color: $primary;
+}
+
+// =+=+=+=+=+=+=+= Buttons =+=+=+=+=+=+=+=
+.btn-group {
+	display: flex;
+	gap: 1rem;
+}
+
+.btn {
+	@include displayAlighJustifyCenter();
+	padding: .6rem 1rem;
+	height: 46px;
+	cursor: pointer;
+	gap: 1rem;
+	border-radius: $radius;
+	background: none;
+	border: none;
+	font-weight: bold;
+	letter-spacing: .04rem;
+	font-size: .9rem;
+	transition: $transition;
+
+	&:hover {
+		box-shadow: 7px 7px 0px 0px darken($color: $bg, $amount: 4);
+		transform: translate(-5px, -5px);
+	}
+}
+
+.btn--primary {
+	background-color: $primary;
+	
+	#icon {fill: $bg;}
+	#icon--stroke {stroke: $bg;}
+}
+
+.btn--special {
+	.btn__info {
+		display: flex;
+		flex-direction: column;
+
+		.btn__info-text {
+			display: block;
+			font-size: .7em;
+			text-align: left;
+		}
+	}
+}
+
+.btn--outline {
+	border: .13rem solid $primary;
+	color: $primary;
+	// color: $text;
+	
+	#icon {fill: $primary;}
+	#icon--stroke {stroke: $primary;}
+}
