@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.8c8b03bf.css",
-    "main.js": "/static/js/main.d51fa093.js",
-    "static/media/opt1.png": "/static/media/opt1.aad9e557ac6a9c926dd4.png",
-    "static/media/opt3.png": "/static/media/opt3.f1886ea34db5de26fc67.png",
-    "static/media/opt0.png": "/static/media/opt0.0097b843d6d00993b2d9.png",
-    "static/media/curriculo.pdf": "/static/media/curriculo.770a18ff71b48d7475c0.pdf",
-    "static/media/resume.pdf": "/static/media/resume.b09a42a4f18ee8b938e6.pdf",
-    "static/media/opt2.png": "/static/media/opt2.8c5dcd99da26f2291d32.png",
-    "static/media/todo.png": "/static/media/todo.059d998c09a58a9c129e.png",
-    "static/media/beauty.webp": "/static/media/beauty.bb1ac59186d538ce7fb6.webp",
-    "static/media/dvd.webp": "/static/media/dvd.6bbb769b1d69486a4c49.webp",
-    "index.html": "/index.html",
-    "main.8c8b03bf.css.map": "/static/css/main.8c8b03bf.css.map",
-    "main.d51fa093.js.map": "/static/js/main.d51fa093.js.map"
+    "main.css": "/terminal/portfolio/static/css/main.8c8b03bf.css",
+    "main.js": "/terminal/portfolio/static/js/main.b94fa1ed.js",
+    "static/media/opt1.png": "/terminal/portfolio/static/media/opt1.aad9e557ac6a9c926dd4.png",
+    "static/media/opt3.png": "/terminal/portfolio/static/media/opt3.f1886ea34db5de26fc67.png",
+    "static/media/opt0.png": "/terminal/portfolio/static/media/opt0.0097b843d6d00993b2d9.png",
+    "static/media/curriculo.pdf": "/terminal/portfolio/static/media/curriculo.770a18ff71b48d7475c0.pdf",
+    "static/media/resume.pdf": "/terminal/portfolio/static/media/resume.b09a42a4f18ee8b938e6.pdf",
+    "static/media/opt2.png": "/terminal/portfolio/static/media/opt2.8c5dcd99da26f2291d32.png",
+    "static/media/todo.png": "/terminal/portfolio/static/media/todo.059d998c09a58a9c129e.png",
+    "static/media/beauty.webp": "/terminal/portfolio/static/media/beauty.bb1ac59186d538ce7fb6.webp",
+    "static/media/dvd.webp": "/terminal/portfolio/static/media/dvd.6bbb769b1d69486a4c49.webp",
+    "index.html": "/terminal/portfolio/index.html",
+    "main.8c8b03bf.css.map": "/terminal/portfolio/static/css/main.8c8b03bf.css.map",
+    "main.b94fa1ed.js.map": "/terminal/portfolio/static/js/main.b94fa1ed.js.map"
   },
   "entrypoints": [
     "static/css/main.8c8b03bf.css",
-    "static/js/main.d51fa093.js"
+    "static/js/main.b94fa1ed.js"
   ]
 }
