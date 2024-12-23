@@ -2,6 +2,7 @@ import { useState } from 'react'
 import LanguageSwitcher from './components/LanguageSwitcher'
 import { useTranslation } from 'react-i18next';
 import { ThemeSwitcher } from './components/ThemeSwitcher';
+import { Console } from './components/Terminal';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -19,6 +20,7 @@ function App() {
           This text will change color based on the theme
         </p>
       </div>
+      <Console />
     </main>
   )
 }
