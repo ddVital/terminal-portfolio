@@ -13,8 +13,11 @@
     "i18next": "^24.2.0",
     "i18next-browser-languagedetector": "^8.0.2",
     "react": "^18.3.1",
+    "react-console-emulator": "^5.0.2",
     "react-dom": "^18.3.1",
-    "react-i18next": "^15.2.0"
+    "react-draggable": "^4.4.6",
+    "react-i18next": "^15.2.0",
+    "react-resizable": "^3.0.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
