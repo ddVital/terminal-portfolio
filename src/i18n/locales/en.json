@@ -1,0 +1,12 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Software Developer"
+  }
+}
