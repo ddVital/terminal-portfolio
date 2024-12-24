@@ -54,6 +54,7 @@ export function Console() {
         fixed inset-0 
         pointer-events-none 
         transition-all duration-150
+        z-[99999]
         ${isMinimized ? 'invisible' : 'visible'}
       `}
     >
