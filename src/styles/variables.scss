@@ -1,0 +1,97 @@
+// Design Tokens
+$tokens: (
+  light: (
+    colors: (
+      background: (
+        primary: #ffffff,
+        secondary: #f3f4f6,
+        tertiary: #f9fafb,
+        hover: #e2e3e3,
+      ),
+      text: (
+        primary: #111827,
+        secondary: #4b5563,
+        muted: #6b7280
+      ),
+      accent: (
+        primary: #2563eb,
+        secondary: #3b82f6,
+        hover: #1d4ed8
+      ),
+      gradient: (
+        primary: linear-gradient(135deg, #2563eb, #3b82f6),
+        secondary: linear-gradient(135deg, #3b82f6, #60a5fa)
+      ),
+      border: #e5e7eb,
+      success: #10b981,
+      error: #ef4444,
+      warning: #f59e0b
+    ),
+    fonts: (
+      family: (
+        sans: ('Inter', sans-serif),
+        mono: ('Fira Code', monospace)
+      ),
+      size: (
+        xs: 0.75rem,
+        sm: 0.875rem,
+        base: 1rem,
+        lg: 1.125rem,
+        xl: 1.25rem,
+        '2xl': 1.5rem
+      ),
+      weight: (
+        normal: 400,
+        medium: 500,
+        semibold: 600,
+        bold: 700
+      )
+    ),
+    spacing: (
+      xs: 0.5rem,
+      sm: 0.75rem,
+      base: 1rem,
+      lg: 1.5rem,
+      xl: 2rem,
+      '2xl': 3rem
+    ),
+    radius: (
+      sm: 0.25rem,
+      base: 0.375rem,
+      md: 0.5rem,
+      lg: 0.75rem,
+      full: 9999px
+    ),
+    shadows: (
+      sm: '0 1px 2px rgba(0, 0, 0, 0.05)',
+      base: '0 1px 3px rgba(0, 0, 0, 0.1)',
+      md: '0 4px 6px rgba(0, 0, 0, 0.1)',
+      lg: '0 10px 15px rgba(0, 0, 0, 0.1)'
+    )
+  ),
+  dark: (
+    colors: (
+      background: (
+        primary: #111827,
+        secondary: #1f2937,
+        tertiary: #1f2937,
+        hover: #273043
+      ),
+      text: (
+        primary: #f9fafb,
+        secondary: #d1d5db,
+        muted: #9ca3af
+      ),
+      accent: (
+        primary: #3b82f6,
+        secondary: #60a5fa,
+        hover: #2563eb
+      ),
+      gradient: (
+        primary: linear-gradient(135deg, #2563eb, #3b82f6),
+        secondary: linear-gradient(135deg, #3b82f6, #60a5fa)
+      ),
+      border: #374151
+    )
+  )
+);

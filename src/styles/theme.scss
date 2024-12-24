@@ -1,68 +1,33 @@
-// Theme Variables
-$colors: (
-  light: (
-    background: (
-      primary: #ffffff,
-      secondary: #f3f4f6
-    ),
-    text: (
-      primary: #111827,
-      secondary: #4b5563
-    ),
-    accent: (
-      primary: #2563eb,
-      secondary: #3b82f6
-    ),
-    border: #e5e7eb
-  ),
-  dark: (
-    background: (
-      primary: #111827,
-      secondary: #1f2937
-    ),
-    text: (
-      primary: #f9fafb,
-      secondary: #d1d5db
-    ),
-    accent: (
-      primary: #3b82f6,
-      secondary: #60a5fa
-    ),
-    border: #374151
-  )
-);
+@import './variables.scss';
 
-// Root Variables
 :root {
-  @each $property, $value in map-get($colors, 'light') {
-    @if type-of($value) == 'map' {
-      @each $subproperty, $subvalue in $value {
-        --#{$property}-#{$subproperty}: #{$subvalue};
+  @each $mode, $tokens in $tokens {
+    @if $mode == 'light' {
+      @each $category, $values in $tokens {
+        @each $property, $value in $values {
+          @if type-of($value) == 'map' {
+            @each $subprop, $subval in $value {
+              --#{$category}-#{$property}-#{$subprop}: #{$subval};
+            }
+          } @else {
+            --#{$category}-#{$property}: #{$value};
+          }
+        }
       }
-    } @else {
-      --#{$property}: #{$value};
     }
   }
 }
 
-// Dark Mode
 .dark {
-  @each $property, $value in map-get($colors, 'dark') {
-    @if type-of($value) == 'map' {
-      @each $subproperty, $subvalue in $value {
-        --#{$property}-#{$subproperty}: #{$subvalue};
+  @each $category, $values in map-get($tokens, 'dark') {
+    @each $property, $value in $values {
+      @if type-of($value) == 'map' {
+        @each $subprop, $subval in $value {
+          --#{$category}-#{$property}-#{$subprop}: #{$subval};
+        }
+      } @else {
+        --#{$category}-#{$property}: #{$value};
       }
-    } @else {
-      --#{$property}: #{$value};
     }
-  }
-}
-
-// Theme Transitions
-.theme-transition {
-  transition: {
-    // property: background-color, color, border-color;
-    // duration: 300ms;
-    // timing-function: ease;
   }
 }
