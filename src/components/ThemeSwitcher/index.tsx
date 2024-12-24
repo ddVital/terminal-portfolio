@@ -1,5 +1,4 @@
-import { Icon } from '../Icon'
-import { iconPaths } from '../Icon/paths'
+import { Icon } from '../ui/Icon'
 import { useTheme } from '../../hooks/useTheme'
 
 export function ThemeSwitcher() {
@@ -27,7 +26,7 @@ export function ThemeSwitcher() {
       title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
     >
       <Icon 
-        path={theme === 'dark' ? iconPaths.sun : iconPaths.moon} 
+        name={theme === 'dark' ? 'sun' : 'moon'} 
         className="w-5 h-5 transition-transform duration-300" 
       />
     </button>
