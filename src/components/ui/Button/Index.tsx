@@ -27,10 +27,12 @@ export function Button({
   const variants = {
     primary: 'bg-accent-primary hover:bg-accent-secondary text-white',
     secondary: 'bg-background-secondary hover:bg-gray-200 dark:hover:bg-gray-700',
-    ghost: 'hover:bg-gray-100 dark:hover:bg-gray-800'
+    ghost: 'hover:bg-gray-100 dark:hover:bg-gray-800',
+    icon: 'bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800',
   }
 
   const sizes = {
+    xs: 'text-xs',
     sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2',
     lg: 'px-6 py-3 text-lg'
