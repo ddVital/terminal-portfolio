@@ -1,11 +1,11 @@
 import Terminal from 'react-console-emulator'
 import Draggable from 'react-draggable'
 import { useState, useRef } from 'react'
+import { useTerminalStore } from '../../store/terminal'
 
 export function Console() {
+  const { isVisible, isMinimized, setMinimized } = useTerminalStore()
   const [isMaximized, setIsMaximized] = useState(false)
-  const [isMinimized, setIsMinimized] = useState(false)
-  const [isOpen, setIsOpen] = useState(true)
   const [position, setPosition] = useState({ x: 50, y: 50 })
   const [isDragging, setIsDragging] = useState(false)
   const dragBounds = useRef<HTMLDivElement>(null)
@@ -23,7 +23,6 @@ export function Console() {
     if (terminal) {
       terminal.style.transform = 'scale(0.95) translateY(10px)'
       terminal.style.opacity = '0'
-      setTimeout(() => setIsOpen(false), 150)
     }
   }
 
@@ -32,7 +31,7 @@ export function Console() {
     if (terminal) {
       terminal.style.transform = 'scale(0.8) translateY(100%)'
       terminal.style.opacity = '0'
-      setTimeout(() => setIsMinimized(true), 150)
+      setTimeout(() => setMinimized(true), 150)
     }
   }
 
@@ -41,19 +40,22 @@ export function Console() {
       description: 'Close the terminal',
       usage: 'exit',
       fn: () => {
-        setIsOpen(false)
         return 'Terminal closed'
       }
     }
   }
 
-  if (!isOpen) return null
-  if (isMinimized) return null
+  if (!isVisible) return null
 
   return (
     <div
       ref={dragBounds}
-      className="fixed inset-0 pointer-events-none transition-all duration-150"
+      className={`
+        fixed inset-0 
+        pointer-events-none 
+        transition-all duration-150
+        ${isMinimized ? 'invisible' : 'visible'}
+      `}
     >
       <Draggable 
         handle=".terminal-header" 

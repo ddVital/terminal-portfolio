@@ -3,8 +3,11 @@ import LanguageSwitcher from './components/LanguageSwitcher'
 import { useTranslation } from 'react-i18next';
 import { ThemeSwitcher } from './components/ThemeSwitcher';
 import { Console } from './components/Terminal';
+import { useTerminalStore } from './store/terminal';
 
 function App() {
+  const toggleTerminal = useTerminalStore((state) => state.toggleTerminal)
+
   const { t, i18n } = useTranslation();
 
   const currentLanguage = i18n.language;
@@ -20,6 +23,9 @@ function App() {
           This text will change color based on the theme
         </p>
       </div>
+      <button onClick={toggleTerminal}>
+        Open Terminal
+      </button>
       <Console />
     </main>
   )
