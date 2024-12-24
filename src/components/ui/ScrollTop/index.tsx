@@ -35,7 +35,7 @@ export function ScrollToTop() {
         right-8
         p-3
         rounded-xl
-        bg-secondary
+        bg-background-secondary
         text-white
         shadow-lg
         transition-all
