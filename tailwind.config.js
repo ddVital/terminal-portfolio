@@ -7,21 +7,22 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
-      backgroundColor: {
-        primary: 'var(--background-primary)',
-        secondary: 'var(--background-secondary)',
-      },
-      textColor: {
-        primary: 'var(--text-primary)',
-        secondary: 'var(--text-secondary)',
-      },
-      borderColor: {
-        primary: 'var(--border)',
-      },
       colors: {
+        background: {
+          primary: 'var(--colors-background-primary)',
+          secondary: 'var(--colors-background-secondary)',
+          tertiary: 'var(--colors-background-tertiary)',
+          hover: 'var(--colors-background-hover)',
+        },
+        text: {
+          primary: 'var(--colors-text-primary)',
+          secondary: 'var(--colors-text-secondary)',
+          muted: 'var(--colors-text-muted)',
+        },
         accent: {
-          primary: 'var(--accent-primary)',
-          secondary: 'var(--accent-secondary)',
+          primary: 'var(--colors-accent-primary)',
+          secondary: 'var(--colors-accent-secondary)',
+          hover: 'var(--colors-accent-hover)',
         },
       },
       keyframes: {
