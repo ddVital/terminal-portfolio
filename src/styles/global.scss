@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './animations.scss';
+
 :root {
   @apply bg-white text-black;
 }
