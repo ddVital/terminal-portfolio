@@ -1,0 +1,12 @@
+@keyframes leaveTop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+.leave-top {
+  animation: leaveTop 1.5s ease-in forwards;
+}
