@@ -1,13 +1,16 @@
 import { useEffect } from "react"
-import { Icon } from "../../ui/Icon"
 import { menuItems } from "./menuItems"
+import { useTranslation } from "react-i18next"
 
 interface MobileMenuProps {
   isOpen: boolean
   setIsOpen: (value: boolean) => void
+  activeSection: string
 }
 
-export function MobileMenu({ isOpen, setIsOpen }: MobileMenuProps) {
+export function MobileMenu({ isOpen, setIsOpen, activeSection }: MobileMenuProps) {
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (isOpen) {
@@ -44,11 +47,11 @@ export function MobileMenu({ isOpen, setIsOpen }: MobileMenuProps) {
               className={`
                 text-4xl
                 font-medium 
-                text-text-primary 
                 hover:text-accent-primary 
                 transition-all
                 duration-500
                 transform
+                ${activeSection === item.sectionId ? 'text-accent-primary' : 'text-text-primary'}
                 ${isOpen 
                   ? 'translate-y-0 opacity-100' 
                   : 'translate-y-8 opacity-0'
@@ -59,7 +62,7 @@ export function MobileMenu({ isOpen, setIsOpen }: MobileMenuProps) {
               }}
               onClick={() => setIsOpen(false)}
             >
-             {item.name}
+             {t(item.name)}
            </a>
           ))}
         </div>
