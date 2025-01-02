@@ -13,15 +13,9 @@ export function ThemeSwitcher() {
     <button
       onClick={toggleTheme}
       className={`
-        p-2
-        rounded-md
-        border border-gray-200
-        dark:border-gray-700
         transform
         hover:scale-110
         active:scale-95
-        hover:bg-gray-100
-        dark:hover:bg-gray-800
       `}
       title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
     >

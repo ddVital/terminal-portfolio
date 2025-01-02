@@ -1,12 +1,18 @@
 {
-  "header": {
-    "home": "Início",
-    "about": "Sobre",
+  "navbar": {
+    "home": "Home",
+    "about": "Sobre mim",
     "projects": "Projetos",
+    "skills": "Skills",
     "contact": "Contato"
   },
   "hero": {
-    "greeting": "Olá, eu sou",
-    "role": "Desenvolvedor de Software"
+    "intro": "Introdução",
+    "greeting": "Olá, meu nome é David Vital, ",
+    "creating": "Criando",
+    "solution": "Soluções modernas com <span>elegância</span>",
+    "developing": "Desenvolvendo",
+    "planning": "Planejando",
+    "designing": "Designing"
   }
 }

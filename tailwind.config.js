@@ -7,6 +7,10 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        archivo: ['Archivo', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+      },
       colors: {
         background: {
           primary: 'var(--colors-background-primary)',
@@ -22,8 +26,12 @@ export default {
         accent: {
           primary: 'var(--colors-accent-primary)',
           secondary: 'var(--colors-accent-secondary)',
+          terminal: 'var(--colors-accent-terminal)',
           hover: 'var(--colors-accent-hover)',
         },
+      },
+      backgroundImage: {
+        'gradient-primary': 'linear-gradient(135deg, #2867F0, #19B0EC)',
       },
       keyframes: {
         bounce: {

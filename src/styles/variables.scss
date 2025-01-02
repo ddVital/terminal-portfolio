@@ -16,6 +16,7 @@ $tokens: (
       accent: (
         primary: #2563eb,
         secondary: #3b82f6,
+        terminal: #19B0EC,
         hover: #1d4ed8
       ),
       gradient: (
@@ -72,23 +73,23 @@ $tokens: (
   dark: (
     colors: (
       background: (
-        primary: #111827,
-        secondary: #1f2937,
-        tertiary: #1f2937,
+        primary: #111112,
+        secondary: #191919,
+        tertiary: #282828,
         hover: #273043
       ),
       text: (
-        primary: #f9fafb,
-        secondary: #d1d5db,
+        primary: #E5E6ED,
+        secondary: #737582,
         muted: #9ca3af
       ),
       accent: (
-        primary: #3b82f6,
-        secondary: #60a5fa,
-        hover: #2563eb
+        primary: #2867F0,
+        secondary: #0048E8,
+        hover: #0048E8
       ),
       gradient: (
-        primary: linear-gradient(135deg, #2563eb, #3b82f6),
+        primary: linear-gradient(135deg, #2867F0, #19B0EC),
         secondary: linear-gradient(135deg, #3b82f6, #60a5fa)
       ),
       border: #374151

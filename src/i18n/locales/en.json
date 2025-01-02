@@ -1,12 +1,18 @@
 {
-  "header": {
+  "navbar": {
     "home": "Home",
-    "about": "About",
+    "about": "About me",
     "projects": "Projects",
-    "contact": "Contact"
+    "skills": "Skills",
+    "contact": "Contact me"
   },
   "hero": {
-    "greeting": "Hi, I'm",
-    "role": "Software Developer"
+    "intro": "Introduction",
+    "greeting": "Hi, I'm David Vital, ",
+    "solution": "Modern soluctions with <span>Timeless</span> elegance",
+    "creating": "Creating",
+    "developing": "Developing",
+    "planning": "Planning",
+    "designing": "Designing"
   }
 }
