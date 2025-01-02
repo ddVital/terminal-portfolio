@@ -4,14 +4,25 @@
 
 @import './animations.scss';
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 :root {
   @apply bg-white text-black;
 }
 
 .dark {
-  @apply bg-gray-900 text-white;
+  background-color: theme('colors.background.primary');
+  color: theme('colors.text.primary');
 }
 
 body {
   @apply transition-colors duration-300;
+}
+
+.solution span {
+  font-style: italic;
 }
