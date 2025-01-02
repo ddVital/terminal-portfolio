@@ -5,12 +5,18 @@ import { Icon } from '../../ui/Icon'
 import { Hamburger } from '../../ui/Icon/animated'
 import { Button } from '../../ui/Button/Index'
 import { ThemeSwitcher } from '../../ThemeSwitcher'
+import { Logo } from '../../Logo'
+import { useTerminalStore } from '../../../store/terminal'
+import { menuItems } from './menuItems'
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
+  const [activeSection, setActiveSection] = useState('')
+
+  const toggleTerminal = useTerminalStore((state) => state.toggleTerminal)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +24,22 @@ export function Navbar() {
       setIsVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10)
       setIsScrolled(currentScrollPos > 20)
       setPrevScrollPos(currentScrollPos)
+
+      const sections = menuItems.map(item => document.getElementById(item.sectionId))
+      const scrollPosition = window.scrollY + 100
+
+      sections.forEach((section) => {
+        if (!section) return
+        
+        if (
+          section.offsetTop <= scrollPosition &&
+          section.offsetTop + section.offsetHeight > scrollPosition
+        ) {
+          setActiveSection(section.id)
+          console.log(section.id);
+          
+        }
+      })
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -35,10 +57,10 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto py-1 px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-12">
             <div className="flex-shrink-0">
-              <span className="text-2xl font-bold text-accent-primary">DD</span>
+              <Logo variant='default' className={`${isOpen ? 'hidden' : ''}`} />
             </div>
             
-            <DesktopMenu />
+            <DesktopMenu activeSection={activeSection} />
 
             <div className="flex items-center gap-6">
               <div className={`${isOpen ? 'hidden' : 'flex items-center'}`}>
@@ -54,8 +76,7 @@ export function Navbar() {
                 className={`hidden md:flex ${isOpen ? 'md:hidden' : ''}`}
                 variant='primary'
                 size='sm'
-                icon='Terminal'
-                iconPosition='right' 
+                onClick={toggleTerminal}
                 animated
               >
                 Open Terminal
@@ -74,7 +95,7 @@ export function Navbar() {
         </div>
       </nav>
 
-      <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+      <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} activeSection={activeSection} />
     </>
   )
 }
