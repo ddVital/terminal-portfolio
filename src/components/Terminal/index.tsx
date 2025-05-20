@@ -81,12 +81,11 @@ export function Console() {
           rounded-lg 
           shadow-xl 
           overflow-hidden
-          border border-gray-200 
-          dark:border-gray-700
+          border border-gray-700
           ${!isDragging ? 'transition-[width,height,opacity,transform] duration-300' : ''}
         `}>
           {/* Terminal Header */}
-          <div className="terminal-header h-8 bg-gray-100 dark:bg-gray-800 flex items-center px-4 gap-2 cursor-move" onDoubleClick={handleMaximize}>
+          <div className="terminal-header h-8 bg-gray-800 flex items-center px-4 gap-2 cursor-move" onDoubleClick={handleMaximize}>
             <div className="flex gap-2">
               <button
                 className="w-3 h-3 rounded-full bg-red-500"
@@ -101,7 +100,7 @@ export function Console() {
                 onClick={() => setIsMaximized(prev => !prev)}
               />
             </div>
-            <span className="text-sm text-gray-500 dark:text-gray-400 flex-1 text-center">
+            <span className="text-sm text-gray-400 flex-1 text-center">
               Terminal
             </span>
           </div>
@@ -111,7 +110,8 @@ export function Console() {
             <Terminal
               commands={commands}
               welcomeMessage="Welcome to my portfolio terminal! Type 'help' for available commands."
-              promptLabel="➜"
+              promptLabel={<span className="text-accent-terminal">dvd@portfolio:~$</span>}
+              inputStyle={{ color: 'text-text-primary' }}
               style={{
                 height: isMaximized ? 'calc(100vh - 32px)' : '368px',
                 backgroundColor: 'bg-primary',

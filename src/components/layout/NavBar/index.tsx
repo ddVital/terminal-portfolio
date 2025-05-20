@@ -4,10 +4,11 @@ import { MobileMenu } from './MobileMenu'
 import { Icon } from '../../ui/Icon'
 import { Hamburger } from '../../ui/Icon/animated'
 import { Button } from '../../ui/Button/Index'
-import { ThemeSwitcher } from '../../ThemeSwitcher'
 import { Logo } from '../../Logo'
 import { useTerminalStore } from '../../../store/terminal'
 import { menuItems } from './menuItems'
+import LanguageSwitcher from '../../LanguageSwitcher'
+import { ThemeSwitcher } from '../../ThemeSwitcher'
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -49,28 +50,23 @@ export function Navbar() {
   return (
     <>
       <nav className={`
-        fixed top-0 w-full border-b border-b-background-tertiary transition-all duration-300 transform z-[111]
+        fixed top-0 left-1 right-1 md:left-32 md:right-32 rounded-full transition-all duration-300 transform z-[111]
         ${isOpen ? 'border-none shadow-none' : ''}
-        ${isVisible ? 'translate-y-0' : '-translate-y-full'}
-        ${isScrolled ? 'bg-background-primary/80 shadow-md backdrop-blur-md' : 'bg-transparent border-none'}
+        ${isVisible ? 'translate-y-4' : '-translate-y-full'}
+        ${isScrolled ? 'bg-background-blurred shadow-md backdrop-blur-md md:left-60 md:right-60' : 'bg-transparent border-none'}
       `}>
-        <div className="max-w-7xl mx-auto py-1 px-4 sm:px-6 lg:px-8">
+        <div className="py-1 px-3">
           <div className="flex items-center justify-between h-12">
             <div className="flex-shrink-0">
-              <Logo variant='default' className={`${isOpen ? 'hidden' : ''}`} />
+              <Logo variant='minimal' className={`${isOpen ? 'hidden' : ''} fill-text-primary`} />
             </div>
             
             <DesktopMenu activeSection={activeSection} />
 
             <div className="flex items-center gap-6">
               <div className={`${isOpen ? 'hidden' : 'flex items-center'}`}>
-                <ThemeSwitcher />
+                <LanguageSwitcher />
               </div>
-
-              <Button className={`md:hidden ${isOpen ? 'hidden' : ''}`} variant='icon' size='xs'>
-                <Icon name='Terminal' animated/>
-              </Button>
-
 
               <Button
                 className={`hidden md:flex ${isOpen ? 'md:hidden' : ''}`}

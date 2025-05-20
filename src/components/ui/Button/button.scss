@@ -2,6 +2,7 @@
   position: relative;
   overflow: hidden;
   
+  // Ripple effect
   &::after {
     content: '';
     position: absolute;
@@ -22,5 +23,37 @@
     transform: scale(0, 0);
     opacity: .3;
     transition: 0s;
+  }
+
+  // Hover animations
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+    // Icon animation
+    .icon {
+      transform: translateX(4px);
+    }
+
+    // Different animation for icon position left
+    &.icon-left .icon {
+      transform: translateX(-4px);
+    }
+  }
+
+  // Smooth transitions
+  .icon {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  // Ghost button hover effect
+  &.ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+  }
+
+  // Primary button hover gradient
+  &.primary:hover {
+    background: linear-gradient(to right, var(--text-primary), var(--text-secondary));
   }
 }

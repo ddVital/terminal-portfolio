@@ -1,8 +1,29 @@
+@use './animations.scss';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import './animations.scss';
+@import 'locomotive-scroll/dist/locomotive-scroll.css';
+
+// ... existing styles
+
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+[data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-section] {
+  perspective: 1000px;
+}
+
 
 * {
   box-sizing: border-box;
@@ -10,19 +31,79 @@
   margin: 0;
 }
 
-:root {
-  @apply bg-white text-black;
-}
-
-.dark {
-  background-color: theme('colors.background.primary');
-  color: theme('colors.text.primary');
+html {
+  // scroll-behavior: smooth;
 }
 
 body {
-  @apply transition-colors duration-300;
+  @apply bg-background-primary text-text-primary;
+  @apply font-poppins;
 }
 
-.solution span {
-  font-style: italic;
+.theme-transition {
+  will-change: background-color, color, border-color;
+}
+
+// Ensure canvas transitions smoothly
+canvas {
+  transition: opacity 0.1s ease;
+}
+
+body, 
+section, 
+div, 
+header, 
+footer, 
+nav {
+  transition: background .2s cubic-bezier(.19,1,.22,1);
+}
+
+// Add specific faster transitions for text elements
+h1, h2, h3, h4, h5, h6, p, span, a, button, li {
+  transition: color 0.1s cubic-bezier(.19,1,.22,1) !important;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+// Update the existing scrollbar styles
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+// Add these new styles
+html {
+  &:hover {
+    ::-webkit-scrollbar-thumb {
+      opacity: 1;
+    }
+  }
+}
+
+// For Firefox
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.stack-container {
+  perspective: 1000px;
 }

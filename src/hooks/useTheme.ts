@@ -16,7 +16,8 @@ export function useTheme() {
       (newTheme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
 
     // Add transition class before changing theme
-    // root.classList.add('transition-colors', 'duration-300')
+    root.classList.add('theme-transition')
+    
     root.classList.remove('light', 'dark')
     root.classList.add(isDark ? 'dark' : 'light')
     root.setAttribute('data-theme', isDark ? 'dark' : 'light')
@@ -28,10 +29,10 @@ export function useTheme() {
       localStorage.setItem('theme', newTheme)
     }
 
-    // Remove transition class after animation
+    // Remove transition class after animation completes
     setTimeout(() => {
-      // root.classList.remove('transition-colors', 'duration-300')
-    }, 300)
+      root.classList.remove('theme-transition')
+    }, 500)
   }
 
   useEffect(() => {

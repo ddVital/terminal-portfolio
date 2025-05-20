@@ -3,16 +3,97 @@
     "home": "Home",
     "about": "About me",
     "projects": "Projects",
-    "skills": "Skills",
+    "experiences": "Experience",
     "contact": "Contact me"
   },
   "hero": {
-    "intro": "Introduction",
-    "greeting": "Hi, I'm David Vital, ",
-    "solution": "Modern soluctions with <span>Timeless</span> elegance",
-    "creating": "Creating",
-    "developing": "Developing",
-    "planning": "Planning",
-    "designing": "Designing"
+    "intro": "Hi, My name is David.", 
+    "title": "Building Web Experiences That Feel Like Magic",
+    "contact": "Get in touch",
+    "meeting": "Book a meeting"
+  },
+  "projects": {
+    "title": "Wonderful projects",
+    "subtitle": "I've worked on",
+    "viewMore": "View more on github",
+    "1": {
+      "description": "Toolzz Chat customer engagement platform designed to help businesses manage conversations across multiple channels like websites, email, WhatsApp, Facebook, and Twitter from a single dashboard. It offers features like live chat, shared inboxes, automation rules, canned responses, and detailed reporting, making it a powerful alternative to proprietary CRM solutions."
+    },
+    "2": {
+      "description": "Toolzz bots is a platform for creating conversational forms and chatbots with a focus on customization, smooth user experience, and easy deployment. It allows users to design conversation flows visually without needing complex coding. Typebot is widely used for lead generation, customer support, surveys, and onboarding flows."
+    },
+    "3": {
+      "description": "MULI is a digital platform focused on optimizing the logistics and delivery ecosystem for companies of all sizes. It offers smart route management, real-time tracking, and automated communication tools to enhance delivery efficiency, customer satisfaction, and operational transparency."
+    },
+    "4": {
+      "description": "Toolzz bots is a platform for creating conversational forms and chatbots with a focus on customization, smooth user experience, and easy deployment. It allows users to design conversation flows visually without needing complex coding. Typebot is widely used for lead generation, customer support, surveys, and onboarding flows."
+    }
+  },
+  "quote": {
+    "title": "Building software is like performing magic, one person starts the trick, but it's the crowd that makes it unforgettable."
+  },
+  "about": {
+    "title": "About me.",
+    "subtitle": "get to know me",
+    "desc_1": "My passion for computers started in early childhood — some of my first memories are of exploring them, curious about how they worked. In 2019, I took my first step into coding with a Pascal tutorial on YouTube. That simple “Hello, World” sparked something in me. Soon after, I discovered Python and shifted my focus, eventually expanding into multiple languages. Over time, I’ve honed skills in scalability, clean code, maintainability, and best practices — knowledge I’ve gained through real-world experience and by learning from incredible developers along the way.",
+    "desc_2": "Recently, I stepped into two new roles: husband and father — both at 21. These life changes have given me even more drive to grow, not just as a developer, but as a person. Every line of code I write now carries a bit more purpose. I’m passionate about building meaningful things, staying curious, and always improving — in life and in tech.",
+    "meeting": {
+      "title": "Schedule a meeting.",
+      "subtitle": "Let's discuss"
+    },
+    "reading": {
+      "title": "Currently reading.",
+      "subtitle": "Creative Selection"
+    },
+    "languages": {
+      "title": "Languages.",
+      "subtitle": "I18n"
+    },
+    "since": {
+      "title": "Since."
+    },
+    "education": {
+      "title": "Education.",
+      "subtitle": "I gratuated in Computer Science at"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "The amazing teams I've collaborated with",
+    "description": "With 4+ years of experience in web and mobile development, I specialize in creating scalable, high-performance applications. I excel in agile environments, working closely with teams to deliver seamless user experiences and maintainable, efficient code.",
+    "techstack": "Technologies I've worked with on these projects"
+  },
+  "contact": {
+    "title": "I would love to hear from you",
+    "subtitle": "See you soon",
+    "description": "Open to conversations, collaborations, and new connections! Whether you have a project in mind, a question about tech, or just want to say hi, I'd love to hear from you. Feel free to reach out!",
+    "startAConversation": "Start a conversation",
+    "email": "Click to email me."
+  },
+  "general": {
+    "scrollTop": "Scroll back to top",
+    "changeLanguage": "Change language",
+    "openTerminal": "Use the terminal experience"
+  },
+  "jobs": {
+    "toolzz": {
+      "role": "Full Stack Developer",
+      "description": "Full stack developer on two customer-facing platforms: a chat-based support system and a flow-based chatbot builder. I handle planning, development, bug fixes, code reviews, deployments, and collaborate with designers and clients."
+    },
+    "slice": {
+      "role": "Full Stack Developer",
+      "description": "At slice, I played a key role in developing customer-facing features for the platform, enabling brands to harness the power of influencer marketing and user-generated content. I collaborated with cross-functional teams to build and optimize scalable web applications using React, TypeScript, Node.js, and PostgreSQL. My focus was on creating seamless, high-performance experiences that help global brands connect with their audiences and drive impactful marketing results."
+    },
+    "nomad": {
+      "role": "Backend Developer",
+      "description": "At Nomad, I developed and maintained scalable backend services and APIs, focusing on cloud-based solutions to enable seamless international banking experiences for users. I worked in an agile environment, collaborating with cross-functional teams to deliver secure and high-performance financial tools."
+    }
+  },
+  "duration": {
+    "present": "Present",
+    "monthSingular": "month",
+    "monthPlural": "months",
+    "yearSingular": "year",
+    "yearPlural": "years"
   }
 }

@@ -4,21 +4,11 @@ export function Terminal(props: SVGProps<SVGSVGElement>) {
   return (
     <svg 
       viewBox="0 0 24 24" 
-      className="w-5 h-5 group"
+      className="w-8 h-8 md:w-6 md:h-6 group"
       fill="none" 
       stroke="currentColor"
       {...props}
-    >
-      {/* Terminal Window */}
-      <rect 
-        className="transition-transform duration-300 group-hover:scale-[1.02]" 
-        x="2" 
-        y="4" 
-        width="20" 
-        height="16" 
-        rx="2"
-      />
-      
+    > 
       {/* Command Prompt */}
       <path 
         className="transition-all duration-300 group-hover:translate-x-0.5" 
@@ -42,7 +32,7 @@ export function Terminal(props: SVGProps<SVGSVGElement>) {
         <animate
           attributeName="opacity"
           values="0;1;0"
-          dur="1.8s"
+          dur="1.4s"
           repeatCount="indefinite"
         />
       </path>

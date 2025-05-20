@@ -10,26 +10,25 @@ const LanguageSwitcher = () => {
   ];
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2" role="group" aria-label="Language switcher">
       {languages.map(({ code, label }) => (
         <button
           key={code}
           onClick={() => i18n.changeLanguage(code)}
+          aria-pressed={currentLanguage === code}
           className={`
-            px-3 py-1.5 
-            rounded-md 
-            border border-gray-200 
-            dark:border-gray-700
+            p-1
+            text-sm
+            rounded-md
             transition-all 
             duration-200 
-            hover:bg-gray-100 
-            hover:scale-105
-            dark:hover:bg-gray-800
             ${currentLanguage === code 
-              ? 'bg-gray-100 dark:bg-gray-800 font-medium' 
-              : 'bg-transparent'
+              ? 'text-text-primary font-medium' 
+              : ' text-text-secondary'
             }
           `}
+          data-tooltip={t('general.changeLanguage')}
+          data-tooltip-position="bottom"
         >
           {label}
         </button>

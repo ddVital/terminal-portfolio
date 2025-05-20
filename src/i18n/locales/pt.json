@@ -14,5 +14,59 @@
     "developing": "Desenvolvendo",
     "planning": "Planejando",
     "designing": "Designing"
+  },
+  "projects": {
+    "title": "Projetos incríveis",
+    "subtitle": "Nos quais trabalhei",
+    "viewMore": "Ver mais no github",
+    "1": {
+      "description": "Toolzz Chat é uma plataforma de engajamento com o cliente projetada para ajudar empresas a gerenciar conversas em vários canais, como sites, e-mail, WhatsApp, Facebook e Twitter, a partir de um único painel. Oferece recursos como chat ao vivo, caixas de entrada compartilhadas, regras de automação, respostas prontas e relatórios detalhados, tornando-se uma alternativa poderosa às soluções proprietárias de CRM."
+    },
+    "2": {
+      "description": "Toolzz bots é uma plataforma para criar formulários conversacionais e chatbots com foco em personalização, experiência do usuário suave e fácil implantação. Permite que os usuários projetem fluxos de conversa visualmente sem precisar de codificação complexa. Typebot é amplamente utilizado para geração de leads, suporte ao cliente, pesquisas e fluxos de integração."
+    },
+    "3": {
+      "description": "MULI é uma plataforma digital focada na otimização do ecossistema logístico e de entrega para empresas de todos os tamanhos. Oferece gerenciamento inteligente de rotas, rastreamento em tempo real e ferramentas de comunicação automatizadas para melhorar a eficiência da entrega, a satisfação do cliente e a transparência operacional."
+    },
+    "4": {
+      "description": "Toolzz bots é uma plataforma para criar formulários conversacionais e chatbots com foco em personalização, experiência do usuário suave e fácil implantação. Permite que os usuários projetem fluxos de conversa visualmente sem precisar de codificação complexa. Typebot é amplamente utilizado para geração de leads, suporte ao cliente, pesquisas e fluxos de integração."
+    }
+  },
+  "quote": {
+    
+  },
+  "experience": {
+    "title": "Experiência",
+    "subtitle": "As equipes incríveis com as quais colaborei",
+    "description": "Com mais de 4 anos de experiência em desenvolvimento web e mobile, sou especializado na criação de aplicações escaláveis e de alto desempenho. Me destaco em ambientes ágeis, trabalhando em estreita colaboração com as equipes para entregar experiências de usuário perfeitas e código eficiente e de fácil manutenção.",
+    "techstack": "Tecnologias com as quais trabalhei nesses projetos"
+  },
+  "contact": {
+    "title": "Vamos conversar?",
+    "subtitle": "Até logo",
+    "description": "Estou aberto a conversas, colaborações e novas conexões! Se você tem um projeto em mente, uma dúvida sobre tecnologia ou só quer bater um papo, adoraria ouvir de você. Fique à vontade para entrar em contato!",
+    "startAConversation": "Iniciar uma conversa",
+    "email": "Clique para me enviar um e-mail."
+  },
+  "jobs": {
+    "toolzz": {
+      "role": "Desenvolvedor Full Stack",
+      "description": "Desenvolvedor full stack em duas plataformas voltadas para o cliente: um sistema de suporte baseado em chat e um construtor de chatbots baseado em fluxos. Sou responsável pelo planejamento, desenvolvimento, correção de bugs, revisões de código, implantações e colaboração com designers e clientes."
+    },
+    "slice": {
+      "role": "Desenvolvedor Full Stack",
+      "description": "Na slice, desempenhei um papel fundamental no desenvolvimento de funcionalidades voltadas para o cliente na plataforma, permitindo que marcas aproveitassem o poder do marketing de influenciadores e conteúdo gerado por usuários. Colaborei com equipes multifuncionais para construir e otimizar aplicações web escaláveis usando React, TypeScript, Node.js e PostgreSQL. Meu foco foi criar experiências fluídas e de alto desempenho que ajudassem grandes marcas globais a se conectar com seu público e a gerar resultados de marketing impactantes."
+    },
+    "nomad": {
+      "role": "Desenvolvedor Backend",
+      "description": "Na Nomad, desenvolvi e mantive serviços backend escaláveis e APIs, com foco em soluções baseadas em nuvem para proporcionar uma experiência bancária internacional sem fronteiras aos usuários. Trabalhei em um ambiente ágil, colaborando com equipes multifuncionais para entregar ferramentas financeiras seguras e de alto desempenho."
+    }
+  },
+  "duration": {
+    "present": "Atualmente",
+    "monthSingular": "mês",
+    "monthPlural": "meses",
+    "yearSingular": "ano",
+    "yearPlural": "anos"
   }
 }

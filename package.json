@@ -5,19 +5,29 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "host": "vite --host",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.1",
+    "@react-three/drei": "^9.121.5",
+    "@react-three/fiber": "^8.17.14",
+    "@studio-freight/lenis": "^1.0.42",
+    "framer-motion": "^12.4.10",
+    "gsap": "^3.12.5",
     "i18next": "^24.2.0",
     "i18next-browser-languagedetector": "^8.0.2",
+    "locomotive-scroll": "^4.1.4",
     "react": "^18.3.1",
     "react-console-emulator": "^5.0.2",
     "react-dom": "^18.3.1",
     "react-draggable": "^4.4.6",
     "react-i18next": "^15.2.0",
+    "react-intersection-observer": "^9.15.1",
     "react-resizable": "^3.0.5",
+    "three": "^0.173.0",
     "zustand": "^5.0.2"
   },
   "devDependencies": {
@@ -32,6 +42,7 @@
     "globals": "^15.13.0",
     "postcss": "^8.4.49",
     "sass": "^1.83.0",
+    "source-map-support": "^0.5.21",
     "tailwindcss": "^3.4.17",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.1",

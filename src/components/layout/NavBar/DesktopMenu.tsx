@@ -13,10 +13,10 @@ export function DesktopMenu({ activeSection }: { activeSection: string }) {
             key={item.name}
             href={item.href}
             className={`
-              text-sm font-archivo transition-all duration-500
+              text-sm font-archivo font-bold transition-all duration-500
               ${activeSection === item.sectionId 
-                ? 'text-accent-primary font-bold' 
-                : 'text-text-secondary hover:text-accent-primary'
+                ? 'text-text-primary font-extrabold drop-shadow-md shadow-black' 
+                : 'text-text-secondary hover:text-text-primary'
               }
             `}
           >

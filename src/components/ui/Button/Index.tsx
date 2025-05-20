@@ -3,8 +3,8 @@ import { Icon } from '../Icon'
 import './button.scss'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'ghost'
-  size?: 'sm' | 'md' | 'lg'
+  variant?: 'primary' | 'secondary' | 'ghost' | 'icon'
+  size?: 'xs' | 'sm' | 'md' | 'lg'
   icon?: string
   iconPosition?: 'left' | 'right'
   animated?: boolean
@@ -25,37 +25,36 @@ export function Button({
   ...props 
 }: ButtonProps) {
   const variants = {
-    primary: 'bg-accent-primary hover:bg-accent-secondary text-white',
-    secondary: 'bg-background-secondary hover:bg-gray-200 dark:hover:bg-gray-700',
-    ghost: 'hover:bg-gray-100 dark:hover:bg-gray-800',
-    icon: 'bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800',
+    primary: 'bg-text-primary hover:bg-white text-background-primary btn-ripple',
+    secondary: 'border border-text-primary btn-ripple',
+    ghost: 'bg-gradient-primary text-transparent bg-clip-text hover:text-underline',
+    icon: 'bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 btn-ripple',
   }
 
   const sizes = {
     xs: 'text-xs',
-    sm: 'px-3 py-1.5 text-sm',
-    md: 'px-4 py-2',
-    lg: 'px-6 py-3 text-lg'
+    sm: 'px-4 py-2 text-sm',
+    md: 'px-6 py-3',
+    lg: 'px-8 py-4 text-lg'
   }
 
   return (
     <button
       className={`
-        btn-ripple
         inline-flex items-center justify-center
         gap-2
-        rounded-md
-        font-medium
+        rounded-full
+        font-bold
         transition-all
-        duration-200
+        duration-400
         ${variants[variant]}
         ${sizes[size]}
         ${loading && 'opacity-75 cursor-wait'}
         ${disabled && 'opacity-50 cursor-not-allowed'}
-        hover:-translate-y-0.5
         hover:shadow-lg
         active:translate-y-0
         active:scale-95
+        font-acumin
         disabled:active:scale-100
         disabled:hover:translate-y-0
         disabled:hover:shadow-none

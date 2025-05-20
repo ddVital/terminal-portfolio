@@ -4,11 +4,12 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
+        acumin: ['Acumin Pro', 'sans-serif'],
         archivo: ['Archivo', 'sans-serif'],
+        tuffy: ['Tuffy', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
       },
       colors: {
@@ -16,6 +17,7 @@ export default {
           primary: 'var(--colors-background-primary)',
           secondary: 'var(--colors-background-secondary)',
           tertiary: 'var(--colors-background-tertiary)',
+          blurred: 'var(--colors-background-blurred)',
           hover: 'var(--colors-background-hover)',
         },
         text: {
@@ -26,12 +28,11 @@ export default {
         accent: {
           primary: 'var(--colors-accent-primary)',
           secondary: 'var(--colors-accent-secondary)',
-          terminal: 'var(--colors-accent-terminal)',
           hover: 'var(--colors-accent-hover)',
         },
       },
       backgroundImage: {
-        'gradient-primary': 'linear-gradient(135deg, #2867F0, #19B0EC)',
+        'gradient-primary': 'linear-gradient(90deg, #004499, #00B266)',
       },
       keyframes: {
         bounce: {
